@@ -1,4 +1,5 @@
 /* 正如 Unix的wc程序 */
+/* word count */
 %option noyywrap
 
 %{

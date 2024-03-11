@@ -1,4 +1,4 @@
-/* 英式英语 -> 美工英语 */
+/* UK English -> US English */
 %option noyywrap
 
 %%
