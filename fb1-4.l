@@ -1,15 +1,15 @@
 /* 识别出用于计算器的记号并把它们输出 */
-%option noyywrap
+/* %option noyywrap */
 
 %{
 	enum yytokentype {
 		NUMBER = 258,
-		ADD = '+',
-		SUB = '-',
-		MUL = '*',
-		DIV = '/',
-		ABS = '|',
-		EOL = '\n'
+		ADD = 259,
+		SUB = 260,
+		MUL = 261,
+		DIV = 262,
+		ABS = 263,
+		EOL = 264
 	};
 
 	int yylval;
@@ -31,10 +31,11 @@ int main(int argc, char **argv) {
 	int tok;
 
 	while(tok = yylex()) {
+		printf("%d", tok);
 		if(tok == NUMBER) {
-			printf("%d", yylval);
+			printf(" = %d\n", yylval);
 		} else {
-			printf("%c", tok);
+			printf("\n");
 		}
 	}
 
