@@ -10,9 +10,9 @@ int lines = 0;
 
 
 %%
-[^ \t\n\r\f\v]+    { words++; chars += strlen(yytext); }
-\n           { chars++; lines++; }
-.            { chars++; }
+[^ \t\n\r\f\v]+    	{ words++; chars += strlen(yytext); }
+\n           	   	{ chars++; lines++; }
+.            	   	{ chars++; }
 %%
 
 int main(int argc, char **argv) {
